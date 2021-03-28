@@ -22,7 +22,7 @@ export default function CreateBattleForm() {
           <label>Title:</label>
           <input
             type="text"
-            placeholder="Battle Title"
+            placeholder="Example"
             value={title}
             required
             onChange={(e) => setTitle(e.target.value)}
@@ -30,7 +30,7 @@ export default function CreateBattleForm() {
           <label>Link to samples:</label>
           <input
             type="url"
-            placeholder="https://youtube.com/example"
+            placeholder="https://www.youtube.com or https://www.dropbox.com"
             pattern="https://.+"
             required
             value={url}

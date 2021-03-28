@@ -53,6 +53,7 @@
     }
 
     &[type="text"]:focus,
+    &[type="url"]:focus,
     &[type="submit"]:focus {
       outline: 0;
       box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
