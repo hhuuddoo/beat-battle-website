@@ -1,0 +1,37 @@
+.battle-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  background: $bg-color;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  &__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__title {
+    grid-column: span 2;
+    font-size: 1.2rem;
+    color: $primary-color;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__status,
+  &__duration {
+    align-self: flex-end;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: $secondary-color;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
+  }
+
+  &__duration {
+    justify-self: flex-end;
+  }
+}
