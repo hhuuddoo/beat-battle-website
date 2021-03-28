@@ -18,9 +18,21 @@ body {
   text-transform: uppercase;
 }
 
+// Add margin on left and right sides
 .container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+// Panel that holds content
+.main-content {
+  min-height: 700px;
+  height: calc(100vh - 12rem);
+  min-width: 1000px;
+  width: 95%;
+  margin: 4rem auto;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }

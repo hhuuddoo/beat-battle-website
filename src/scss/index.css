@@ -27,6 +27,17 @@ body {
   padding: 0 1rem;
 }
 
+.main-content {
+  min-height: 700px;
+  height: calc(100vh - 12rem);
+  min-width: 1000px;
+  width: 95%;
+  margin: 4rem auto;
+  background-color: white;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 .header {
   background-color: #94bdd1;
   height: 4rem;
