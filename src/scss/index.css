@@ -38,6 +38,18 @@ body {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.browse-grid {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  -ms-grid-columns: (minmax(19.5rem, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(19.5rem, 1fr));
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}
+
 .header {
   background-color: #94bdd1;
   height: 4rem;

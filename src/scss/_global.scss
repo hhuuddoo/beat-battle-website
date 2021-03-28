@@ -36,3 +36,12 @@ body {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+.browse-grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(3, minmax(19.5rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+}

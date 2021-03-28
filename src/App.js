@@ -1,10 +1,12 @@
-import { Header, Content } from "./components";
+import { Header, Content, BrowseGrid } from "./components";
 
 function App() {
   return (
     <>
       <Header />
-      <Content></Content>
+      <Content>
+        <BrowseGrid></BrowseGrid>
+      </Content>
     </>
   );
 }
