@@ -19,29 +19,25 @@ export default function CreateBattleForm() {
       <div className="form-container">
         <h2 className="create-form-title">Create Battle</h2>
         <form className="create-form" onSubmit={handleSubmit}>
-          <div className="title-container">
-            <label>Title:</label>
-            <input
-              type="text"
-              placeholder="Battle Title"
-              value={title}
-              required
-              onChange={(e) => setTitle(e.target.value)}
-            />
-          </div>
-          <div className="link-container">
-            <label>Link to samples:</label>
-            <input
-              type="url"
-              placeholder="https://youtube.com/example"
-              pattern="https://.+"
-              required
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-            />
-          </div>
-          <div className="submission-duration-container">
-            <label>Submission Duration:</label>
+          <label>Title:</label>
+          <input
+            type="text"
+            placeholder="Battle Title"
+            value={title}
+            required
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <label>Link to samples:</label>
+          <input
+            type="url"
+            placeholder="https://youtube.com/example"
+            pattern="https://.+"
+            required
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          />
+          <label>Submission Duration:</label>
+          <div>
             <input
               type="range"
               min={1}
@@ -51,8 +47,8 @@ export default function CreateBattleForm() {
             />
             <span>{duration} hr</span>
           </div>
-          <div className="votin-duration-container">
-            <label>Voting Duration:</label>
+          <label>Voting Duration:</label>
+          <div>
             <input
               type="range"
               min={1}

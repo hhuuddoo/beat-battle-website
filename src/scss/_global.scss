@@ -2,6 +2,7 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   background-color: $bg-color;
+  outline-color: $primary-color;
 }
 
 *,
@@ -44,4 +45,8 @@ body {
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   padding: 2rem;
+}
+
+::placeholder {
+  color: $secondary-color;
 }
