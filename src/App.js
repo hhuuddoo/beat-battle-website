@@ -3,7 +3,7 @@ import { Create, Browse, Home } from "./pages";
 function App() {
   return (
     <>
-      <Create />
+      <Home />
     </>
   );
 }

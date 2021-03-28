@@ -1,0 +1,52 @@
+.hero {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+  height: 100vh;
+  min-height: 700px;
+
+  &__title {
+    grid-column: span 12;
+    align-self: end;
+    font-size: 6rem;
+    margin: 0;
+    color: $primary-color;
+  }
+
+  &__button {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    grid-row: 2;
+    align-self: flex-start;
+    font-size: 2rem;
+    padding: 1rem 4rem;
+    font-weight: 300;
+    border-radius: 2rem;
+    color: $primary-color;
+
+    &--create {
+      grid-column: 7 / span 4;
+      background-color: $cta-color;
+      color: $bg-color;
+      border: 2px solid $cta-color;
+      transition: color 80ms ease-out, background-color 80ms ease-out;
+
+      &:hover {
+        color: $cta-color;
+        background-color: $bg-color;
+      }
+    }
+
+    &--browse {
+      grid-column: 3 / span 4;
+      transition: color 80ms ease-out;
+
+      &:hover {
+        color: $cta-color;
+      }
+    }
+  }
+}

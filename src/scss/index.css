@@ -210,4 +210,70 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+  height: 100vh;
+  min-height: 700px;
+}
+
+.hero__title {
+  grid-column: span 12;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  font-size: 6rem;
+  margin: 0;
+  color: #3d748f;
+}
+
+.hero__button {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  font-weight: 300;
+  border-radius: 2rem;
+  color: #3d748f;
+}
+
+.hero__button--create {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-column: 7 / span 4;
+  background-color: #66ccff;
+  color: #f8fbfc;
+  border: 2px solid #66ccff;
+  -webkit-transition: color 80ms ease-out, background-color 80ms ease-out;
+  transition: color 80ms ease-out, background-color 80ms ease-out;
+}
+
+.hero__button--create:hover {
+  color: #66ccff;
+  background-color: #f8fbfc;
+}
+
+.hero__button--browse {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 4;
+  grid-column: 3 / span 4;
+  -webkit-transition: color 80ms ease-out;
+  transition: color 80ms ease-out;
+}
+
+.hero__button--browse:hover {
+  color: #66ccff;
+}
 /*# sourceMappingURL=index.css.map */
