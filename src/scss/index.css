@@ -231,6 +231,8 @@ body {
       grid-template-rows: repeat(2, 1fr);
   justify-items: center;
   row-gap: 2rem;
+  -webkit-column-gap: 3rem;
+          column-gap: 3rem;
   height: 100vh;
   min-height: 700px;
 }
@@ -261,9 +263,11 @@ body {
 }
 
 .hero__button--create {
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 4;
-  grid-column: 7 / span 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1 / span 6;
+  -ms-grid-column-align: end;
+      justify-self: end;
   background-color: #ff7733;
   color: #fcf9f8;
   border: 2px solid #ff7733;
@@ -277,9 +281,11 @@ body {
 }
 
 .hero__button--browse {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 4;
-  grid-column: 3 / span 4;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 6;
+  grid-column: 7 / span 6;
+  -ms-grid-column-align: start;
+      justify-self: start;
   -webkit-transition: color 80ms ease-out;
   transition: color 80ms ease-out;
 }
