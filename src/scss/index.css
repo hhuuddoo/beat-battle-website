@@ -2,8 +2,8 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #f8fbfc;
-  outline-color: #3d748f;
+  background-color: #fcf9f8;
+  outline-color: #8f583d;
 }
 
 *,
@@ -52,23 +52,23 @@ body {
 }
 
 ::-webkit-input-placeholder {
-  color: #94bdd1;
+  color: #d1a894;
 }
 
 :-ms-input-placeholder {
-  color: #94bdd1;
+  color: #d1a894;
 }
 
 ::-ms-input-placeholder {
-  color: #94bdd1;
+  color: #d1a894;
 }
 
 ::placeholder {
-  color: #94bdd1;
+  color: #d1a894;
 }
 
 .header {
-  background-color: #94bdd1;
+  background-color: #d1a894;
   height: 4rem;
 }
 
@@ -87,7 +87,7 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: #f8fbfc;
+  color: #fcf9f8;
 }
 
 .main-nav__items li {
@@ -103,7 +103,7 @@ body {
 }
 
 .main-nav__items li:not(:first-child):hover {
-  color: #3d748f;
+  color: #8f583d;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -145,16 +145,16 @@ body {
   margin: 0;
   padding: 0;
   font-size: 2rem;
-  color: #3d748f;
+  color: #8f583d;
 }
 
 .create-form input {
   height: 2.75rem;
   font-weight: 300;
   font-size: 1rem;
-  color: #94bdd1;
+  color: #d1a894;
   border-radius: 0.5rem;
-  border: 1px solid #3d748f;
+  border: 1px solid #8f583d;
   -webkit-box-shadow: none;
           box-shadow: none;
   padding: 0.75rem;
@@ -172,10 +172,10 @@ body {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  border: 2px solid #66ccff;
+  border: 2px solid #ff7733;
   border-radius: 1rem;
-  background-color: #66ccff;
-  color: #f8fbfc;
+  background-color: #ff7733;
+  color: #fcf9f8;
   font-weight: 700;
   width: 15rem;
   cursor: pointer;
@@ -185,13 +185,18 @@ body {
 
 .create-form input[type="submit"]:hover {
   background-color: white;
-  color: #66ccff;
+  color: #ff7733;
 }
 
 .create-form input[type="text"]:focus, .create-form input[type="url"]:focus, .create-form input[type="submit"]:focus {
   outline: 0;
-  -webkit-box-shadow: 0 0 0 4px rgba(61, 116, 143, 0.4);
-          box-shadow: 0 0 0 4px rgba(61, 116, 143, 0.4);
+  -webkit-box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
+          box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
+}
+
+.create-form input[type="range"] {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .create-form label {
@@ -200,7 +205,7 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
   justify-self: flex-end;
-  color: #3d748f;
+  color: #8f583d;
 }
 
 .create-form div {
@@ -210,6 +215,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.create-form div span {
+  margin-left: 1rem;
+  color: #d1a894;
 }
 
 .hero {
@@ -232,7 +242,7 @@ body {
       align-self: end;
   font-size: 6rem;
   margin: 0;
-  color: #3d748f;
+  color: #8f583d;
 }
 
 .hero__button {
@@ -247,23 +257,23 @@ body {
   padding: 1rem 4rem;
   font-weight: 300;
   border-radius: 2rem;
-  color: #3d748f;
+  color: #8f583d;
 }
 
 .hero__button--create {
   -ms-grid-column: 7;
   -ms-grid-column-span: 4;
   grid-column: 7 / span 4;
-  background-color: #66ccff;
-  color: #f8fbfc;
-  border: 2px solid #66ccff;
+  background-color: #ff7733;
+  color: #fcf9f8;
+  border: 2px solid #ff7733;
   -webkit-transition: color 80ms ease-out, background-color 80ms ease-out;
   transition: color 80ms ease-out, background-color 80ms ease-out;
 }
 
 .hero__button--create:hover {
-  color: #66ccff;
-  background-color: #f8fbfc;
+  color: #ff7733;
+  background-color: #fcf9f8;
 }
 
 .hero__button--browse {
@@ -275,7 +285,7 @@ body {
 }
 
 .hero__button--browse:hover {
-  color: #66ccff;
+  color: #ff7733;
 }
 
 .battle-card {
@@ -288,7 +298,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 1rem;
-  background: #f8fbfc;
+  background: #fcf9f8;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
@@ -310,7 +320,7 @@ body {
 .battle-card__title {
   grid-column: span 2;
   font-size: 1.2rem;
-  color: #3d748f;
+  color: #8f583d;
 }
 
 .battle-card__title p {
@@ -322,7 +332,7 @@ body {
       align-self: flex-end;
   font-size: 0.9rem;
   font-weight: 300;
-  color: #94bdd1;
+  color: #d1a894;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.1);
 }
 

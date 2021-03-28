@@ -58,6 +58,11 @@
       outline: 0;
       box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
     }
+
+    &[type="range"] {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   label {
@@ -71,5 +76,10 @@
   div {
     display: flex;
     align-items: center;
+
+    span {
+      margin-left: 1rem;
+      color: $secondary-color;
+    }
   }
 }
