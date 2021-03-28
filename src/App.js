@@ -1,4 +1,4 @@
-import { Create, Browse } from "./pages";
+import { Create, Browse, Home } from "./pages";
 
 function App() {
   return (
