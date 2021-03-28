@@ -1,12 +1,9 @@
-import { Header, Content, BrowseGrid, CreateBattleForm } from "./components";
+import { Create, Browse } from "./pages";
 
 function App() {
   return (
     <>
-      <Header />
-      <Content>
-        <CreateBattleForm />
-      </Content>
+      <Create />
     </>
   );
 }
