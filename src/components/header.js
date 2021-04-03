@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Header({ browseLink, createLink }) {
+export default function Header({ browseLink, createLink, homeLink }) {
   return (
     <header className="header">
       <nav className="main-nav container">

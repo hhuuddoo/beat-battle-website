@@ -1,15 +1,8 @@
-import React, { useState, useContext } from "react";
+import React from "react";
 import { BattleContext } from "../context/battle-context";
 
-export default function SubmitModal() {
-  const [url, setUrl] = useState("");
-  const { setModalOpen } = useContext(BattleContext);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Beat Submitted");
-    // CLOSE MODAL
-  };
+export default function SubmitModal(props) {
+  const { url, setUrl, setModalOpen, handleSubmit } = props;
 
   return (
     <>
