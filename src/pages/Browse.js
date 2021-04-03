@@ -8,7 +8,7 @@ export default function Browse() {
 
   useEffect(() => {
     setBattles(data.battles);
-  }, [data]);
+  }, []);
 
   return (
     <>

@@ -1,5 +1,4 @@
 import React from "react";
-import { BattleContext } from "../context/battle-context";
 
 export default function SubmitModal(props) {
   const { url, setUrl, setModalOpen, handleSubmit } = props;

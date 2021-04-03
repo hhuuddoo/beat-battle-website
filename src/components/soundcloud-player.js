@@ -15,6 +15,7 @@ export default function SoundcloudPlayer({
   let src = `https://w.soundcloud.com/player/?url=${url}&amp;color=${color}&amp;auto_play=${autoPlay}&amp;hide_related=${hideRelated}&amp;show_comments=${showComments}&amp;show_user=${showUser}&amp;show_reposts=${showReposts}`;
   return (
     <iframe
+      title="Soundcloud Player"
       className="soundcloud-frame"
       width={width}
       height={height}

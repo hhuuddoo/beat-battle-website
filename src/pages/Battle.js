@@ -24,6 +24,8 @@ export default function Battle() {
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
 
+  const now = new Date();
+
   const { battleID } = useParams();
 
   // Store data from database as state variables
@@ -54,7 +56,7 @@ export default function Battle() {
     } else {
       setError("Invalid Battle");
     }
-  }, []);
+  }, [battleID]);
 
   // Redirect user to website where sample or samples are being hosted
   const handleSampleClick = () => {
