@@ -4,7 +4,7 @@ function App() {
   return (
     <>
       {/* <Home /> */}
-      {/* <Browse /> */}
+      <Browse />
       {/* <Create /> */}
       <Battle />
     </>
