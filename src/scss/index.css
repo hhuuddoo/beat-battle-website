@@ -355,10 +355,53 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
+  -ms-grid-rows: 1fr minmax(auto, 12.5rem) 1fr 3fr;
+      grid-template-rows: 1fr minmax(auto, 12.5rem) 1fr 3fr;
   gap: 1rem;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.battle-grid h2 {
+.battle-grid .samples-button {
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #ff7733;
+  -webkit-transition: color 80ms ease-out;
+  transition: color 80ms ease-out;
+}
+
+.battle-grid .samples-button:hover {
+  color: #8f583d;
+}
+
+.battle-grid .submit-button {
+  text-align: center;
+  padding: 1rem 0;
+  border: 1px solid #ff7733;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  background-color: #ff7733;
+  color: #fcf9f8;
+  -webkit-transition: color 80ms ease-out, background-color 80ms ease-out;
+  transition: color 80ms ease-out, background-color 80ms ease-out;
+}
+
+.battle-grid .submit-button:hover {
+  color: #ff7733;
+  background-color: white;
+}
+
+.battle-grid h2.battle-title {
+  background-color: green;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1 / span 4;
@@ -366,10 +409,24 @@ body {
 
 .battle-grid h3 {
   grid-column: 1 / -1;
+  background-color: blue;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
 }
 
-.battle-grid p {
+.battle-grid .battle-description {
   grid-column: 1 / -1;
+  overflow: hidden;
+  background: red;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.battle-grid .battle-description p {
+  margin: 0;
+  padding: 0;
 }
 
 .battle-grid .submission-card {
