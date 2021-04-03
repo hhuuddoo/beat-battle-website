@@ -9,6 +9,7 @@
   align-items: center;
 
   .samples-button {
+    user-select: none;
     text-align: center;
     padding: 1rem 0;
     font-weight: 700;
@@ -22,6 +23,7 @@
   }
 
   .submit-button {
+    user-select: none;
     text-align: center;
     padding: 1rem 0;
     border: 1px solid $cta-color;

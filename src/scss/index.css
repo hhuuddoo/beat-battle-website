@@ -367,6 +367,10 @@ body {
 }
 
 .battle-grid .samples-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-align: center;
   padding: 1rem 0;
   font-weight: 700;
@@ -382,6 +386,10 @@ body {
 }
 
 .battle-grid .submit-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   text-align: center;
   padding: 1rem 0;
   border: 1px solid #ff7733;
