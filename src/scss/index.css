@@ -209,6 +209,10 @@ input[type="range"] {
   margin: 0;
   padding: 0;
   color: #f8fbfc;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main-nav__items li {
@@ -225,16 +229,32 @@ input[type="range"] {
 
 .main-nav__items li:not(:first-child):hover {
   color: #3d748f;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
-.main-nav__items a {
+.main-nav__items li a {
   text-decoration: none;
   color: inherit;
+  position: relative;
 }
 
-.main-nav__items a.main-nav__items--logo {
+.main-nav__items li a.active {
+  font-weight: 700;
+  color: #3d748f;
+}
+
+.main-nav__items li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: calc(-1.5rem + 0.2rem / 2);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 0.2rem;
+  background-color: #3d748f;
+}
+
+.main-nav__items li a.main-nav__items--logo {
   font-size: 2rem;
   font-weight: 700;
 }

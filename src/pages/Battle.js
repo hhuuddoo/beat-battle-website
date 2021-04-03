@@ -73,7 +73,7 @@ export default function Battle() {
 
   return (
     <>
-      <Header />
+      <Header onBrowse={true} />
       {error ? (
         <Error>{error}</Error>
       ) : (

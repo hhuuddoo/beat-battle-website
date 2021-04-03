@@ -22,7 +22,7 @@ export default function Create() {
 
   return (
     <>
-      <Header />
+      <Header onCreate={true} />
       <Content>
         <CreateBattleForm
           title={title}

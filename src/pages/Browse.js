@@ -12,7 +12,7 @@ export default function Browse() {
 
   return (
     <>
-      <Header />
+      <Header onBrowse />
       <Content>
         <BrowseGrid>
           {battles.map((battle, idx) => (

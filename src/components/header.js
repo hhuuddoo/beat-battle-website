@@ -2,7 +2,7 @@ import React from "react";
 import * as ROUTES from "../constants/routes";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ onBrowse = false, onCreate = false }) {
   return (
     <header className="header">
       <nav className="main-nav container">
@@ -13,10 +13,14 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link to={ROUTES.BROWSE}>Browse</Link>
+            <Link to={ROUTES.CREATE} className={onCreate ? `active` : null}>
+              Create
+            </Link>
           </li>
           <li>
-            <Link to={ROUTES.CREATE}>Create</Link>
+            <Link to={ROUTES.BROWSE} className={onBrowse ? `active` : null}>
+              Browse
+            </Link>
           </li>
         </ul>
       </nav>
