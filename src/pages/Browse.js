@@ -7,7 +7,7 @@ export default function Browse() {
 
   useEffect(() => {
     setBattles(data.battles);
-  }, []);
+  }, [data]);
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function Browse() {
               title={battle.title}
               status={battle.votingCloseTime}
               duration={battle.submissionCloseTime}
-              onClick={() => console.log("Hello")}
+              onClick={() => alert(battle.id)}
             />
           ))}
           {/* <BattleCard title="EPIC BATTLE #51" status="ONGOING" duration="14h" />
