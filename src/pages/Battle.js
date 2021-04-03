@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BattleGrid,
   SubmissionCard,
@@ -23,6 +23,11 @@ export default function Battle() {
     alert(`Link at ${url}`);
     // CLOSE MODAL
   };
+
+  useEffect(() => {
+    // document.body.classList.toggle('modal-open', isOpen);
+    document.body.classList.toggle("no-scroll", modalOpen);
+  }, [modalOpen]);
 
   return (
     <>

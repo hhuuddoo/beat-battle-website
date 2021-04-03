@@ -3,9 +3,9 @@ import { Create, Browse, Home, Battle } from "./pages";
 function App() {
   return (
     <>
-      <Home />
+      {/* <Home />
       <Browse />
-      <Create />
+      <Create /> */}
       <Battle />
     </>
   );
