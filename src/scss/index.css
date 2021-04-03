@@ -401,7 +401,6 @@ body {
 }
 
 .battle-grid h2.battle-title {
-  background-color: green;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1 / span 4;
@@ -409,7 +408,6 @@ body {
 
 .battle-grid h3 {
   grid-column: 1 / -1;
-  background-color: blue;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -418,7 +416,6 @@ body {
 .battle-grid .battle-description {
   grid-column: 1 / -1;
   overflow: hidden;
-  background: red;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;

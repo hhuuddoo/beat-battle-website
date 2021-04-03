@@ -39,20 +39,17 @@
   }
 
   h2.battle-title {
-    background-color: green;
     grid-column: 1 / span 4;
   }
 
   h3 {
     grid-column: 1 / -1;
-    background-color: blue;
     align-self: end;
   }
 
   .battle-description {
     grid-column: 1 / -1;
     overflow: hidden;
-    background: red;
     align-self: start;
     p {
       margin: 0;
