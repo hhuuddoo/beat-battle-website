@@ -28,6 +28,29 @@ body {
   padding: 0 1rem;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  position: absolute;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  min-width: 700px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 100;
+}
+
 .main-content {
   min-height: 700px;
   height: calc(100vh - 12rem);
@@ -37,6 +60,73 @@ body {
   background-color: white;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input {
+  height: 2.75rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #d1a894;
+  border-radius: 0.5rem;
+  border: 1px solid #8f583d;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0.75rem;
+  -webkit-transition: -webkit-box-shadow 0.1s ease-out;
+  transition: -webkit-box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+}
+
+input[type="submit"] {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  border: 2px solid #ff7733;
+  border-radius: 1rem;
+  background-color: #ff7733;
+  color: #fcf9f8;
+  font-weight: 700;
+  width: 15rem;
+  cursor: pointer;
+  -webkit-transition: color 80ms ease-out, background-color 80ms ease-out;
+  transition: color 80ms ease-out, background-color 80ms ease-out;
+}
+
+input[type="submit"]:hover {
+  background-color: white;
+  color: #ff7733;
+}
+
+input[type="text"]:focus, input[type="url"]:focus, input[type="submit"]:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
+          box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
+}
+
+input[type="text"]:focus ::-webkit-input-placeholder, input[type="url"]:focus ::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input[type="text"]:focus :-ms-input-placeholder, input[type="url"]:focus :-ms-input-placeholder {
+  color: transparent;
+}
+
+input[type="text"]:focus ::-ms-input-placeholder, input[type="url"]:focus ::-ms-input-placeholder {
+  color: transparent;
+}
+
+input[type="text"]:focus ::placeholder, input[type="url"]:focus ::placeholder {
+  color: transparent;
+}
+
+input[type="range"] {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -134,73 +224,6 @@ body {
   padding: 0;
   font-size: 2rem;
   color: #8f583d;
-}
-
-.create-form input {
-  height: 2.75rem;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #d1a894;
-  border-radius: 0.5rem;
-  border: 1px solid #8f583d;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 0.75rem;
-  -webkit-transition: -webkit-box-shadow 0.1s ease-out;
-  transition: -webkit-box-shadow 0.1s ease-out;
-  transition: box-shadow 0.1s ease-out;
-  transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
-}
-
-.create-form input[type="submit"] {
-  -ms-grid-column: 2;
-  grid-column: 2;
-  -ms-grid-column-align: end;
-      justify-self: end;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  border: 2px solid #ff7733;
-  border-radius: 1rem;
-  background-color: #ff7733;
-  color: #fcf9f8;
-  font-weight: 700;
-  width: 15rem;
-  cursor: pointer;
-  -webkit-transition: color 80ms ease-out, background-color 80ms ease-out;
-  transition: color 80ms ease-out, background-color 80ms ease-out;
-}
-
-.create-form input[type="submit"]:hover {
-  background-color: white;
-  color: #ff7733;
-}
-
-.create-form input[type="text"]:focus, .create-form input[type="url"]:focus, .create-form input[type="submit"]:focus {
-  outline: 0;
-  -webkit-box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
-          box-shadow: 0 0 0 4px rgba(143, 88, 61, 0.4);
-}
-
-.create-form input[type="text"]:focus ::-webkit-input-placeholder {
-  color: transparent;
-}
-
-.create-form input[type="text"]:focus :-ms-input-placeholder {
-  color: transparent;
-}
-
-.create-form input[type="text"]:focus ::-ms-input-placeholder {
-  color: transparent;
-}
-
-.create-form input[type="text"]:focus ::placeholder {
-  color: transparent;
-}
-
-.create-form input[type="range"] {
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .create-form label {
@@ -459,5 +482,31 @@ body {
       grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
   padding: 2rem;
+}
+
+.submit-modal .modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.submit-modal .modal__form--title {
+  margin: 0;
+  color: #8f583d;
+  text-align: center;
+}
+
+.submit-modal .modal__form--input {
+  margin-top: 1rem;
+}
+
+.submit-modal .modal__form--submit {
+  margin-top: 1rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 /*# sourceMappingURL=index.css.map */

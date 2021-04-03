@@ -1,0 +1,21 @@
+.submit-modal {
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+
+    &--title {
+      margin: 0;
+      color: $primary-color;
+      text-align: center;
+    }
+
+    &--input {
+      margin-top: 1rem;
+    }
+
+    &--submit {
+      margin-top: 1rem;
+      align-self: flex-end;
+    }
+  }
+}
