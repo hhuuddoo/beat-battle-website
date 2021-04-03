@@ -42,11 +42,13 @@
 
   h2.battle-title {
     grid-column: 1 / span 4;
+    color: $primary-color;
   }
 
   h3 {
     grid-column: 1 / -1;
     align-self: end;
+    color: $secondary-color;
   }
 
   .battle-description {
@@ -56,6 +58,8 @@
     p {
       margin: 0;
       padding: 0;
+      color: $secondary-color;
+      font-weight: 300;
     }
   }
 

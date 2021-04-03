@@ -412,6 +412,7 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-column: 1 / span 4;
+  color: #8f583d;
 }
 
 .battle-grid h3 {
@@ -419,6 +420,7 @@ body {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  color: #d1a894;
 }
 
 .battle-grid .battle-description {
@@ -432,6 +434,8 @@ body {
 .battle-grid .battle-description p {
   margin: 0;
   padding: 0;
+  color: #d1a894;
+  font-weight: 300;
 }
 
 .battle-grid .submission-card {
