@@ -59,6 +59,12 @@
       box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
     }
 
+    &[type="text"]:focus {
+      ::placeholder {
+        color: transparent;
+      }
+    }
+
     &[type="range"] {
       padding-left: 0;
       padding-right: 0;

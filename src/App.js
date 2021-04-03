@@ -1,4 +1,4 @@
-import { Create, Browse, Home } from "./pages";
+import { Create, Browse, Home, Battle } from "./pages";
 
 function App() {
   return (
@@ -6,6 +6,7 @@ function App() {
       <Home />
       <Browse />
       <Create />
+      <Battle />
     </>
   );
 }
