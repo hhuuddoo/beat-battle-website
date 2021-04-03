@@ -53,7 +53,8 @@
 
   .battle-description {
     grid-column: 1 / -1;
-    overflow: hidden;
+    overflow-y: auto;
+    height: 100%;
     align-self: start;
     p {
       margin: 0;
@@ -68,8 +69,11 @@
     grid-column: span 2;
     align-self: start;
     height: 100%;
-    max-height: 26rem;
-    padding: 1rem;
+    max-height: 349px;
+    width: 100%;
+    max-width: 349px;
+    justify-self: center;
+    // padding: 1rem;
     background: $bg-color;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }

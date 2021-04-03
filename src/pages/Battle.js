@@ -5,6 +5,7 @@ import {
   Content,
   Header,
   SubmitModal,
+  SoundcloudPlayer,
 } from "../components";
 
 export default function Battle() {
@@ -51,12 +52,21 @@ export default function Battle() {
           </span>
           <div className="battle-description">
             <p>
-              to nobis sunt repellat quaerat facilis qui tempore aperiam sit
-              maiores! Ea, voluptates.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ex
+              doloremque pariatur excepturi maiores debitis aliquam quam et
+              reprehenderit consequatur, enim, eum sint. Eveniet sapiente
+              accusantium iusto inventore quos quia officiis aut minima ratione
+              eius nulla recusandae nesciunt, amet beatae, labore deleniti
             </p>
           </div>
           <h3>Submissions</h3>
-          <SubmissionCard>1</SubmissionCard>
+          <SubmissionCard>
+            <SoundcloudPlayer
+              url="https://soundcloud.com/jerryfolkmusic/sparks"
+              visual={false}
+              color="3d748f"
+            />
+          </SubmissionCard>
           <SubmissionCard>2</SubmissionCard>
           <SubmissionCard>3</SubmissionCard>
         </BattleGrid>

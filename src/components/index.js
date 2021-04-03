@@ -6,3 +6,4 @@ export { default as CreateBattleForm } from "./create-battle-form";
 export { default as BattleCard } from "./battle-card";
 export { default as SubmissionCard } from "./submission-card";
 export { default as SubmitModal } from "./submit-modal";
+export { default as SoundcloudPlayer } from "./soundcloud-player";
