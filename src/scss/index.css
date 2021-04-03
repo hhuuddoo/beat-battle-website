@@ -507,6 +507,7 @@ input[type="range"] {
 }
 
 .battle-grid .submission-card {
+  position: relative;
   height: 100%;
   width: 100%;
   max-width: 349px;
@@ -515,6 +516,7 @@ input[type="range"] {
   background: #f8fbfc;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 
 .battle-grid .h-scroll-container {
@@ -526,6 +528,22 @@ input[type="range"] {
 
 .battle-grid .h-scroll-container .no-submissions {
   color: #94bdd1;
+}
+
+.submission-card::before {
+  content: "Loading...";
+  color: #94bdd1;
+  font-size: 1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.soundcloud-frame {
+  z-index: 3;
 }
 
 .browse-grid {
