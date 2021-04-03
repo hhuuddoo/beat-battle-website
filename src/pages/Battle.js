@@ -25,11 +25,10 @@ export default function Battle() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Link at ${url}`);
-    // CLOSE MODAL
+    // CLOSE MODAL HERE
   };
 
   useEffect(() => {
-    // document.body.classList.toggle('modal-open', isOpen);
     document.body.classList.toggle("no-scroll", modalOpen);
   }, [modalOpen]);
 
@@ -77,17 +76,6 @@ export default function Battle() {
                 No submissions have been made
               </span>
             )}
-            {/* <SubmissionCard>
-              <SoundcloudPlayer
-                url="https://soundcloud.com/jerryfolkmusic/sparks"
-                visual={false}
-                color="3d748f"
-              />
-            </SubmissionCard> */}
-            {/* <SubmissionCard>2</SubmissionCard>
-            <SubmissionCard>3</SubmissionCard>
-            <SubmissionCard>3</SubmissionCard>
-            <SubmissionCard>3</SubmissionCard> */}
           </HorizontalScrollDiv>
         </BattleGrid>
       </Content>
