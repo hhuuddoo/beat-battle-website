@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function CreateBattleForm() {
-  const [title, setTitle] = useState("");
-  const [url, setUrl] = useState("");
-  const [duration, setDuration] = useState(1);
-  const [voting, setVoting] = useState(1);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    alert(
-      `Battle title: ${title}\nSubmission Link: ${url}\nDuration: ${duration} hr\nVoting Time: ${voting} hr`
-    );
-  };
+export default function CreateBattleForm(props) {
+  const {
+    title,
+    setTitle,
+    url,
+    setUrl,
+    duration,
+    setDuration,
+    voting,
+    setVoting,
+    handleSubmit,
+  } = props;
 
   return (
     <>

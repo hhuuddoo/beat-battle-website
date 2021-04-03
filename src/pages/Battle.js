@@ -18,11 +18,6 @@ export default function Battle() {
     );
   };
 
-  // Open modal that will allow for users to enter battle
-  const handleSubmitPress = () => {
-    alert("Open Modal");
-  };
-
   return (
     <>
       <BattleContext.Provider value={{ setModalOpen }}>

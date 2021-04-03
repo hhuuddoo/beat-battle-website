@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { CreateBattleForm, Content, Header } from "../components";
 
 export default function Create() {
+  const [title, setTitle] = useState("");
+  const [url, setUrl] = useState("");
+  const [duration, setDuration] = useState(1);
+  const [voting, setVoting] = useState(1);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    alert(
+      `Battle title: ${title}\nSubmission Link: ${url}\nDuration: ${duration} hr\nVoting Time: ${voting} hr\n`
+    );
+  };
+
   return (
     <>
       <Header />
       <Content>
-        <CreateBattleForm />
+        <CreateBattleForm
+          title={title}
+          setTitle={setTitle}
+          url={url}
+          setUrl={setUrl}
+          duration={duration}
+          setDuration={setDuration}
+          voting={voting}
+          setVoting={setVoting}
+          handleSubmit={handleSubmit}
+        />
       </Content>
     </>
   );
