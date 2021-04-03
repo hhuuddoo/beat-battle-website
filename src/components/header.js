@@ -1,20 +1,22 @@
 import React from "react";
+import * as ROUTES from "../constants/routes";
+import { Link } from "react-router-dom";
 
-export default function Header({ browseLink, createLink, homeLink }) {
+export default function Header() {
   return (
     <header className="header">
       <nav className="main-nav container">
         <ul className="main-nav__items">
           <li>
-            <a className="main-nav__items--logo" href="">
+            <Link className="main-nav__items--logo" to={ROUTES.HOME}>
               BB
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="">Browse</a>
+            <Link to={ROUTES.BROWSE}>Browse</Link>
           </li>
           <li>
-            <a href="">Create</a>
+            <Link to={ROUTES.CREATE}>Create</Link>
           </li>
         </ul>
       </nav>
