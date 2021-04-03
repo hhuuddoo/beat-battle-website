@@ -15,9 +15,11 @@ function App() {
         <Route exact path={ROUTES.CREATE}>
           <Create />
         </Route>
-        <Route path={`${ROUTES.BROWSE}/:battle`}>
-          <Battle />
-        </Route>
+        <Route
+          exact
+          path={`${ROUTES.BROWSE}/:battleID`}
+          children={<Battle />}
+        ></Route>
       </Switch>
     </Router>
   );

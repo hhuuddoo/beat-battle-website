@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   BattleGrid,
   SubmissionCard,
@@ -23,13 +24,13 @@ export default function Battle() {
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
 
-  const targetBattleID = 2;
+  const { battleID } = useParams();
 
   // Store data from database as state variables
   useEffect(() => {
     // Get data for this battle only
     const newData = data.battles.filter(
-      (battle) => battle.id === targetBattleID
+      (battle) => battle.id === parseInt(battleID)
     );
 
     if (newData.length > 0) {

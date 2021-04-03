@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowseGrid, Content, Header, BattleCard } from "../components";
+import * as ROUTES from "../constants/routes";
 import data from "../testFirstbaseData.json";
 
 export default function Browse() {
@@ -17,10 +18,10 @@ export default function Browse() {
           {battles.map((battle, idx) => (
             <BattleCard
               key={idx}
+              to={`${ROUTES.BROWSE}/${battle.id}`}
               title={battle.title}
               status={battle.votingCloseTime}
               duration={battle.submissionCloseTime}
-              onClick={() => alert(battle.id)}
             />
           ))}
         </BrowseGrid>
