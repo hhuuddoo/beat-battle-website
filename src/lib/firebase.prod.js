@@ -1,4 +1,5 @@
 import Firebase from "firebase/app";
+import "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -7,7 +8,7 @@ const firebaseConfig = {
   projectId: "beat-battle-website",
   storageBucket: "beat-battle-website.appspot.com",
   messagingSenderId: "336678364850",
-  appId: "1:336678364850:web:59132d066f4da405658bab",
+  appId: "1:336678364850:web:f2ef1a95bc33362f658bab",
 };
 
 const firebase = Firebase.initializeApp(firebaseConfig);

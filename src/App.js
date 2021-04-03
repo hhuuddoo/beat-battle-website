@@ -5,7 +5,7 @@ function App() {
     <>
       {/* <Home /> */}
       <Browse />
-      {/* <Create /> */}
+      <Create />
       <Battle />
     </>
   );
