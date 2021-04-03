@@ -75,6 +75,24 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.error-content {
+  min-height: 4rem;
+  height: auto;
+  padding: 1rem;
+  color: $error-color;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  user-select: none;
+
+  p {
+    margin: 0;
+  }
+}
+
 // Change input styling
 input {
   height: 2.75rem;

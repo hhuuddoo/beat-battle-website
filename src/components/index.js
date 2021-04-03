@@ -8,3 +8,4 @@ export { default as SubmissionCard } from "./submission-card";
 export { default as SubmitModal } from "./submit-modal";
 export { default as SoundcloudPlayer } from "./soundcloud-player";
 export { default as HorizontalScrollDiv } from "./horizontal-scroll-div";
+export { default as Error } from "./error";
