@@ -9,6 +9,8 @@ import {
   HorizontalScrollDiv,
 } from "../components";
 
+import urlData from "../data.json";
+
 export default function Battle() {
   const [modalOpen, setModalOpen] = useState(false);
   const [url, setUrl] = useState("");
@@ -62,13 +64,26 @@ export default function Battle() {
           </div>
           <h3>Submissions</h3>
           <HorizontalScrollDiv>
-            <SubmissionCard>
+            {urlData.length > 0 ? (
+              urlData.map(({ url, id }) => {
+                return (
+                  <SubmissionCard key={id}>
+                    <SoundcloudPlayer url={url} color="3d748f" />
+                  </SubmissionCard>
+                );
+              })
+            ) : (
+              <span className="no-submissions">
+                No submissions have been made
+              </span>
+            )}
+            {/* <SubmissionCard>
               <SoundcloudPlayer
                 url="https://soundcloud.com/jerryfolkmusic/sparks"
                 visual={false}
                 color="3d748f"
               />
-            </SubmissionCard>
+            </SubmissionCard> */}
             {/* <SubmissionCard>2</SubmissionCard>
             <SubmissionCard>3</SubmissionCard>
             <SubmissionCard>3</SubmissionCard>

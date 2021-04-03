@@ -80,5 +80,9 @@
     height: 100%;
     max-height: 349px;
     padding: 0.2rem 0 1rem 0;
+
+    .no-submissions {
+      color: $secondary-color;
+    }
   }
 }

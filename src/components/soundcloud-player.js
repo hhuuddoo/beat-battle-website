@@ -18,7 +18,7 @@ export default function SoundcloudPlayer({
       width={width}
       height={height}
       scrolling="no"
-      frameborder="no"
+      frameBorder="no"
       src={src}
       {...restProps}
     />
