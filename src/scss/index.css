@@ -457,6 +457,7 @@ input[type="range"] {
       -ms-grid-row-align: end;
       align-self: end;
   color: #94bdd1;
+  margin: 0;
 }
 
 .battle-grid .battle-description {
@@ -490,7 +491,7 @@ input[type="range"] {
   grid-column: 1/-1;
   height: 100%;
   max-height: 349px;
-  padding: 1rem 0;
+  padding: 0.2rem 0 1rem 0;
 }
 
 .browse-grid {

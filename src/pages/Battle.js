@@ -69,10 +69,10 @@ export default function Battle() {
                 color="3d748f"
               />
             </SubmissionCard>
-            <SubmissionCard>2</SubmissionCard>
+            {/* <SubmissionCard>2</SubmissionCard>
             <SubmissionCard>3</SubmissionCard>
             <SubmissionCard>3</SubmissionCard>
-            <SubmissionCard>3</SubmissionCard>
+            <SubmissionCard>3</SubmissionCard> */}
           </HorizontalScrollDiv>
         </BattleGrid>
       </Content>
