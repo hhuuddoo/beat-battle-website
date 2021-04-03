@@ -32,6 +32,13 @@ body {
   overflow: hidden;
 }
 
+// Container that allows for horizontal scrolling
+.h-scroll-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 // Dark overlay add when modal is on
 .overlay {
   position: fixed;

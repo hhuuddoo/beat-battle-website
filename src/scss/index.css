@@ -32,6 +32,15 @@ body {
   overflow: hidden;
 }
 
+.h-scroll-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .overlay {
   position: fixed;
   top: 0%;
@@ -467,21 +476,20 @@ input[type="range"] {
 }
 
 .battle-grid .submission-card {
-  -ms-grid-row: 4;
-  grid-row: 4;
-  grid-column: span 2;
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
   height: 100%;
-  max-height: 349px;
   width: 100%;
   max-width: 349px;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  min-width: 300px;
+  margin: 0 1rem;
   background: #f8fbfc;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.battle-grid .h-scroll-container {
+  grid-column: 1/-1;
+  height: 100%;
+  max-height: 349px;
 }
 
 .browse-grid {

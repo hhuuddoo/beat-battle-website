@@ -6,6 +6,7 @@ import {
   Header,
   SubmitModal,
   SoundcloudPlayer,
+  HorizontalScrollDiv,
 } from "../components";
 
 export default function Battle() {
@@ -60,15 +61,19 @@ export default function Battle() {
             </p>
           </div>
           <h3>Submissions</h3>
-          <SubmissionCard>
-            <SoundcloudPlayer
-              url="https://soundcloud.com/jerryfolkmusic/sparks"
-              visual={false}
-              color="3d748f"
-            />
-          </SubmissionCard>
-          <SubmissionCard>2</SubmissionCard>
-          <SubmissionCard>3</SubmissionCard>
+          <HorizontalScrollDiv>
+            <SubmissionCard>
+              <SoundcloudPlayer
+                url="https://soundcloud.com/jerryfolkmusic/sparks"
+                visual={false}
+                color="3d748f"
+              />
+            </SubmissionCard>
+            <SubmissionCard>2</SubmissionCard>
+            <SubmissionCard>3</SubmissionCard>
+            <SubmissionCard>3</SubmissionCard>
+            <SubmissionCard>3</SubmissionCard>
+          </HorizontalScrollDiv>
         </BattleGrid>
       </Content>
     </>
