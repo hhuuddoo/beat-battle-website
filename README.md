@@ -2,7 +2,7 @@
 
 An :scream::sob::tongue::triumph: EPIC :eyes::smiley::flushed::fearful: website where you can create, and participate in beat battles.
 
-Check out the app here: https://beatbattles.netlify.app
+Check out the website here: https://beatbattles.netlify.app
 
 ## USAGE:
 
