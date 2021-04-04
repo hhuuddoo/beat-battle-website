@@ -151,25 +151,33 @@ input[type="text"]:focus, input[type="url"]:focus, input[type="submit"]:focus {
           box-shadow: 0 0 0 4px rgba(61, 116, 143, 0.4);
 }
 
-input[type="text"]:focus ::-webkit-input-placeholder, input[type="url"]:focus ::-webkit-input-placeholder {
-  color: transparent;
-}
-
-input[type="text"]:focus :-ms-input-placeholder, input[type="url"]:focus :-ms-input-placeholder {
-  color: transparent;
-}
-
-input[type="text"]:focus ::-ms-input-placeholder, input[type="url"]:focus ::-ms-input-placeholder {
-  color: transparent;
-}
-
-input[type="text"]:focus ::placeholder, input[type="url"]:focus ::placeholder {
-  color: transparent;
-}
-
 input[type="range"] {
   padding-left: 0;
   padding-right: 0;
+}
+
+textarea {
+  height: 5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  color: #94bdd1;
+  border-radius: 0.5rem;
+  border: 1px solid #3d748f;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 0.75rem;
+  -webkit-transition: -webkit-box-shadow 0.1s ease-out;
+  transition: -webkit-box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out, -webkit-box-shadow 0.1s ease-out;
+}
+
+textarea:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 4px rgba(61, 116, 143, 0.4);
+          box-shadow: 0 0 0 4px rgba(61, 116, 143, 0.4);
 }
 
 ::-webkit-input-placeholder {
@@ -269,8 +277,8 @@ input[type="range"] {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (1fr)[4] 6fr;
-      grid-template-rows: repeat(4, 1fr) 6fr;
+  -ms-grid-rows: (1fr)[5] 6fr;
+      grid-template-rows: repeat(5, 1fr) 6fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

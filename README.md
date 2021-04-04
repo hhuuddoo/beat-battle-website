@@ -7,3 +7,4 @@ A website where you can create, and participate in beat battles.
 - Fix click border on header links (probably need to move hover attribute to link tag styling)
 - Recheck if battle is open when submit button is pressed
 - Add description section
+- Fix voting time going into negatives

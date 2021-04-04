@@ -133,16 +133,28 @@ input {
     box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
   }
 
-  &[type="text"]:focus,
-  &[type="url"]:focus {
-    ::placeholder {
-      color: transparent;
-    }
-  }
-
   &[type="range"] {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+textarea {
+  height: 5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+  color: $secondary-color;
+  border-radius: 0.5rem;
+  border: 1px solid $primary-color;
+  box-shadow: none;
+  padding: 0.75rem;
+  transition: box-shadow 0.1s ease-out;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
   }
 }
 

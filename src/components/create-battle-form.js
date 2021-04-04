@@ -24,14 +24,19 @@ export default function CreateBattleForm(props) {
           <input
             type="text"
             placeholder="Example"
+            onFocus={({ target }) => (target.placeholder = "")}
+            onBlur={({ target }) => (target.placeholder = "Example")}
             value={title}
             required
             onChange={(e) => setTitle(e.target.value)}
           />
           <label>Description:</label>
           <textarea
-            maxLength={100}
-            placeholder="add description"
+            maxLength={140}
+            placeholder="Add description"
+            onFocus={({ target }) => (target.placeholder = "")}
+            onBlur={({ target }) => (target.placeholder = "Add description")}
+            rows={3}
             wrap="soft"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -40,6 +45,10 @@ export default function CreateBattleForm(props) {
           <input
             type="url"
             placeholder="e.g. YouTube or Dropbox link"
+            onFocus={({ target }) => (target.placeholder = "")}
+            onBlur={({ target }) =>
+              (target.placeholder = "e.g. YouTube or Dropbox link")
+            }
             pattern="https://.+"
             required
             value={url}

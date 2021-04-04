@@ -12,6 +12,10 @@ export default function SubmitModal(props) {
           <input
             type="url"
             placeholder="Enter soundcloud track link"
+            onFocus={({ target }) => (target.placeholder = "")}
+            onBlur={({ target }) =>
+              (target.placeholder = "Enter soundcloud track link")
+            }
             pattern="https://.+"
             required
             value={url}
