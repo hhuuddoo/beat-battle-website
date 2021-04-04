@@ -11,7 +11,7 @@ export default function SubmitModal(props) {
           <h1 className="modal__form--title">Submit Beat</h1>
           <input
             type="url"
-            placeholder="https://www.youtube.com or https://www.dropbox.com"
+            placeholder="Enter soundcloud track link"
             pattern="https://.+"
             required
             value={url}
