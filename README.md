@@ -39,7 +39,6 @@ After this, your can run `npm start` from the root folder of the project and the
 
 - Fix click border on header links (probably need to move hover attribute to link tag styling)
 - Recheck if battle is open when submit button is pressed
-- Change font weight on input boxes when text is entered
 - Add login and signup functionality
 - Sort battles by upload date
 - Create mulitple pages/Scroll div for battles
