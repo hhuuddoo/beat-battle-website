@@ -4,7 +4,7 @@ A website where you can create, and participate in beat battles.
 
 ## USAGE:
 
-You will need to replace the firebaseConfig details in src/lib/firebase.prod.js with your own firebase config settings:
+You will need to replace the firebaseConfig details in `src/lib/firebase.prod.js` with your own firebase config settings:
 
 ```
 const firebaseConfig = {
