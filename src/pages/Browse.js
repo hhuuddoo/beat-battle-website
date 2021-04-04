@@ -5,6 +5,7 @@ import {
   Header,
   BattleCard,
   BattleGrid,
+  Footer,
 } from "../components";
 import * as ROUTES from "../constants/routes";
 import { getBattleStatus } from "../helpers/getBattleStatus";
@@ -49,6 +50,7 @@ export default function Browse() {
           </BattleGrid>
         )}
       </Content>
+      <Footer />
     </>
   );
 }

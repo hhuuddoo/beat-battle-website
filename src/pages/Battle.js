@@ -9,6 +9,7 @@ import {
   SoundcloudPlayer,
   HorizontalScrollDiv,
   Error,
+  Footer,
 } from "../components";
 import { FirebaseContext } from "../context/firebase";
 import * as ROUTES from "../constants/routes";
@@ -140,6 +141,7 @@ export default function Battle() {
           </BattleGrid>
         </Content>
       )}
+      <Footer />
     </>
   );
 }

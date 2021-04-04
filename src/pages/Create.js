@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../context/firebase";
 import * as ROUTES from "../constants/routes";
 import history from "../helpers/history";
-import { CreateBattleForm, Content, Header } from "../components";
+import { CreateBattleForm, Content, Header, Footer } from "../components";
 import { createBattle } from "../helpers/createBattle";
 
 export default function Create() {
@@ -37,6 +37,7 @@ export default function Create() {
           handleSubmit={handleSubmit}
         />
       </Content>
+      <Footer />
     </>
   );
 }
