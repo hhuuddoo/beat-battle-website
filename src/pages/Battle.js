@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   BattleGrid,
   SubmissionCard,
@@ -10,10 +10,9 @@ import {
   HorizontalScrollDiv,
   Error,
 } from "../components";
+import * as ROUTES from "../constants/routes";
 import { isEmpty } from "../helpers/isEmpty";
 import { useBattle } from "../helpers/useBattle";
-
-import data from "../testFirstbaseData.json";
 
 export default function Battle() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -83,7 +82,9 @@ export default function Battle() {
           </BattleGrid>
         </Content>
       ) : error ? (
-        <Error>{error}</Error>
+        <Error>
+          {error}. <Link to={ROUTES.BROWSE}>Go Back</Link>
+        </Error>
       ) : (
         <Content>
           {modalOpen && (
