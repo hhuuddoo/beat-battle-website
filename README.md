@@ -46,5 +46,5 @@ After this, your can run `npm start` from the root folder of the project and the
 - Move closed battles to seperate section
 - Add voting system
 - Add '\*' to required inputs
-- Add maximum title length when creating battle
+- Add character counter to description textarea
 - Add overflow arrows to scroll div to let user know that there is more content
