@@ -1,6 +1,6 @@
 # Beat Battle Website
 
-A website where you can create, and participate in beat battles.
+An :scream::sob::tongue::triumph: EPIC :eyes::smiley::flushed::fearful: website where you can create, and participate in beat battles.
 
 ## USAGE:
 
