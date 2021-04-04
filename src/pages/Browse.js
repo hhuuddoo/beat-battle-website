@@ -11,7 +11,7 @@ import { getBattleStatus } from "../helpers/getBattleStatus";
 import { useBattles } from "../helpers/useBattles";
 
 export default function Browse() {
-  const { battles } = useBattles();
+  const { battles, loading } = useBattles();
 
   console.log(battles ? "true" : "false");
 
@@ -19,7 +19,11 @@ export default function Browse() {
     <>
       <Header onBrowse />
       <Content>
-        {battles.length > 0 ? (
+        {loading ? (
+          <BattleGrid>
+            <h2 className="battle-title">Loading...</h2>
+          </BattleGrid>
+        ) : battles.length > 0 ? (
           <BrowseGrid>
             {battles.map((battle) => {
               const submissionSeconds = battle.submissionCloseTime.seconds;
