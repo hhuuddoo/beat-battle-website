@@ -8,9 +8,8 @@ function useBattles() {
   const [error, setError] = useState(null);
   const { firebase } = useContext(FirebaseContext);
 
-  const battleRef = firebase.firestore().collection("battles");
-
   useEffect(() => {
+    const battleRef = firebase.firestore().collection("battles");
     battleRef
       .orderBy("submissionCloseTime", "asc")
       .get()
@@ -28,7 +27,7 @@ function useBattles() {
         );
         setLoading(false);
       });
-  }, [battleRef]);
+  }, [firebase]);
 
   return { battles, loading, error };
 }

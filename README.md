@@ -38,7 +38,8 @@ and enter the relevant details for each field.
 After this, your can run `npm start` from the root folder of the project and the application will open in your browser.
 
 ## ISSUES:
-- LOTS of calls to firebase are being made (and my daily limit is running out real quick :sob::sob::flushed::fearful:)
+
+- Webpage not mobile friendly
 
 ## TODO:
 
