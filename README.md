@@ -47,3 +47,4 @@ After this, your can run `npm start` from the root folder of the project and the
 - Add voting system
 - Add '\*' to required inputs
 - Add maximum title length when creating battle
+- Add overflow arrows to scroll div to let user know that there is more content

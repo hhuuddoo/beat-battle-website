@@ -22,6 +22,7 @@ export default function CreateBattleForm(props) {
         <form className="create-form" onSubmit={handleSubmit}>
           <label>Title:</label>
           <input
+            maxLength={50}
             type="text"
             placeholder="Example"
             onFocus={({ target }) => (target.placeholder = "")}
