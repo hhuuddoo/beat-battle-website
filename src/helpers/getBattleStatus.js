@@ -15,7 +15,7 @@ function getBattleStatus(submissionClose, votingClose) {
     duration = msToTime(submissionCloseTime - now);
   } else if (now <= votingCloseTime) {
     status = STATUS.VOTING;
-    duration = msToTime(submissionCloseTime - now);
+    duration = msToTime(votingCloseTime - now);
   }
 
   return { status, duration };
