@@ -4,6 +4,8 @@ export default function CreateBattleForm(props) {
   const {
     title,
     setTitle,
+    description,
+    setDescription,
     url,
     setUrl,
     duration,
@@ -25,6 +27,14 @@ export default function CreateBattleForm(props) {
             value={title}
             required
             onChange={(e) => setTitle(e.target.value)}
+          />
+          <label>Description:</label>
+          <textarea
+            maxLength={100}
+            placeholder="add description"
+            wrap="soft"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
           <label>Link to samples:</label>
           <input

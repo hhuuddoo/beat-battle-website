@@ -8,13 +8,14 @@ import { createBattle } from "../helpers/createBattle";
 export default function Create() {
   const { firebase } = useContext(FirebaseContext);
   const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
   const [duration, setDuration] = useState(1);
   const [voting, setVoting] = useState(1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createBattle(firebase, title, "none", url, duration, voting);
+    createBattle(firebase, title, description, url, duration, voting);
     history.push(ROUTES.BROWSE);
   };
 
@@ -25,6 +26,8 @@ export default function Create() {
         <CreateBattleForm
           title={title}
           setTitle={setTitle}
+          description={description}
+          setDescription={setDescription}
           url={url}
           setUrl={setUrl}
           duration={duration}
