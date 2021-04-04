@@ -23,9 +23,7 @@ export default function Battle() {
   const [modalOpen, setModalOpen] = useState(false);
   const [newSubmissionUrl, setNewSubmissionUrl] = useState("");
   const [sampleLink, setSampleLink] = useState("");
-  const [submissionClose, setSubmissionClose] = useState(null);
   const [battleDescription, setBattleDescription] = useState("");
-  const [votingClose, setVotingClose] = useState(null);
   const [battleTitle, setBattleTitle] = useState("");
   const [submissions, setSubmissions] = useState([]);
   const [canSubmit, setCanSubmit] = useState(false);
@@ -57,8 +55,6 @@ export default function Battle() {
       // Set state
       setSampleLink(link);
       setBattleDescription(description);
-      setSubmissionClose(submissionCloseTime);
-      setVotingClose(votingCloseTime);
       setBattleTitle(title);
       setSubmissions(submissions);
       setError("");
@@ -107,6 +103,7 @@ export default function Battle() {
             <a
               className={`samples-button${canSubmit ? `` : ` battle-closed`}`}
               target="_blank"
+              rel="noreferrer"
               href={sampleLink}
             >
               Samples

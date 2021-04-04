@@ -23,7 +23,7 @@ function useBattles() {
         console.log(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [firebase]);
 
   return { battles, loading };
 }

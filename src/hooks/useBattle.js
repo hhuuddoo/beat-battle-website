@@ -22,7 +22,7 @@ function useBattle(battleID) {
         console.log(error.message);
         setLoading(false);
       });
-  }, []);
+  }, [battleID, firebase]);
 
   return { battle, loading };
 }
