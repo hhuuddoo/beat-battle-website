@@ -12,6 +12,7 @@ function useBattles() {
 
   useEffect(() => {
     battleRef
+      .orderBy("submissionCloseTime", "asc")
       .get()
       .then((battle) => {
         const allBattles = battle.docs.map((battleObj) => {
