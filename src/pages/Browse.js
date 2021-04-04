@@ -15,8 +15,6 @@ import { useBattles } from "../hooks/useBattles";
 export default function Browse() {
   const { battles, loading, error } = useBattles();
 
-  console.log(battles ? "true" : "false");
-
   return (
     <>
       <Header onBrowse />
