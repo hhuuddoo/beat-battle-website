@@ -15,6 +15,8 @@ export default function CreateBattleForm(props) {
     handleSubmit,
   } = props;
 
+  const TEXT_AREA_LIMIT = 500;
+
   return (
     <>
       <div className="form-container">
@@ -32,16 +34,21 @@ export default function CreateBattleForm(props) {
             onChange={(e) => setTitle(e.target.value)}
           />
           <label>Description:</label>
-          <textarea
-            maxLength={500}
-            placeholder="Add description"
-            onFocus={({ target }) => (target.placeholder = "")}
-            onBlur={({ target }) => (target.placeholder = "Add description")}
-            rows={3}
-            wrap="soft"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
+          <div className="description-container">
+            <textarea
+              maxLength={TEXT_AREA_LIMIT}
+              placeholder="Add description"
+              onFocus={({ target }) => (target.placeholder = "")}
+              onBlur={({ target }) => (target.placeholder = "Add description")}
+              rows={3}
+              wrap="soft"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+            <span className="counter">
+              {description.length}/{TEXT_AREA_LIMIT}
+            </span>
+          </div>
           <label>Link to samples:</label>
           <input
             type="url"

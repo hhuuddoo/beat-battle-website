@@ -15,6 +15,23 @@
   max-width: 1000px;
   margin: 0 auto;
 
+  .description-container {
+    position: relative;
+    textarea {
+      width: 100%;
+    }
+    .counter {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0 0.25rem;
+      text-align: right;
+      font-size: 0.75rem;
+      color: rgba($secondary-color, 0.7);
+      letter-spacing: 0.2rem;
+    }
+  }
+
   &-title {
     margin: 0;
     padding: 0;

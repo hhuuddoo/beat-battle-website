@@ -173,6 +173,7 @@ input[type="range"] {
 }
 
 textarea {
+  position: relative;
   height: 5rem;
   font-weight: 300;
   font-size: 1rem;
@@ -309,6 +310,25 @@ textarea:focus {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.create-form .description-container {
+  position: relative;
+}
+
+.create-form .description-container textarea {
+  width: 100%;
+}
+
+.create-form .description-container .counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 0.25rem;
+  text-align: right;
+  font-size: 0.75rem;
+  color: rgba(148, 189, 209, 0.7);
+  letter-spacing: 0.2rem;
 }
 
 .create-form-title {
