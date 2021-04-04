@@ -27,14 +27,12 @@ export default function Battle() {
   const [votingClose, setVotingClose] = useState(null);
   const [battleTitle, setBattleTitle] = useState("");
   const [submissions, setSubmissions] = useState([]);
+  const [canSubmit, setCanSubmit] = useState(false);
   const [error, setError] = useState("");
 
   const { firebase } = useContext(FirebaseContext);
   const { battleID } = useParams();
   const { battle, loading } = useBattle(battleID);
-
-  const { status } = getBattleStatus(submissionClose, votingClose);
-  const canSubmit = status === STATUS.OPEN;
 
   // Store data from database as state variables
   useEffect(() => {
@@ -48,6 +46,12 @@ export default function Battle() {
         title,
         submissions,
       } = battle;
+
+      const { status } = getBattleStatus(
+        submissionCloseTime.seconds,
+        votingCloseTime.seconds
+      );
+      setCanSubmit(status === STATUS.OPEN);
 
       // Set state
       setSampleLink(link);
@@ -101,9 +105,14 @@ export default function Battle() {
             <a className="samples-button" target="_blank" href={sampleLink}>
               Samples
             </a>
-            <span className="submit-button" onClick={() => setModalOpen(true)}>
-              Submit
-            </span>
+            {canSubmit && (
+              <span
+                className="submit-button"
+                onClick={() => setModalOpen(true)}
+              >
+                Submit
+              </span>
+            )}
             <div className="battle-description">
               <p>{"Loading..." && battleDescription}</p>
             </div>
