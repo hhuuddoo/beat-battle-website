@@ -119,7 +119,7 @@ export default function Battle() {
               </span>
             )}
             <div className="battle-description">
-              <p>{"Loading..." && battleDescription}</p>
+              <p>{battleDescription || "No description"}</p>
             </div>
             <h3>Submissions</h3>
             <HorizontalScrollDiv>

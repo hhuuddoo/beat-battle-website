@@ -520,12 +520,15 @@ textarea:focus {
 }
 
 .battle-grid .battle-description {
-  grid-column: 1 / -1;
+  grid-column: 1 / span all;
   overflow-y: auto;
+  padding: 1rem;
+  width: 100%;
   height: 100%;
   -ms-flex-item-align: start;
       -ms-grid-row-align: start;
       align-self: start;
+  background-color: #f8fbfc;
 }
 
 .battle-grid .battle-description p {
