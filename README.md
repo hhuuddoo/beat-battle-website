@@ -39,8 +39,6 @@ After this, your can run `npm start` from the root folder of the project and the
 
 - Fix click border on header links (probably need to move hover attribute to link tag styling)
 - Recheck if battle is open when submit button is pressed
-- Add description section
-- Fix voting time going into negatives
 - Change font weight on input boxes when text is entered
 - Add login and signup functionality
 - Sort battles by upload date
@@ -48,3 +46,4 @@ After this, your can run `npm start` from the root folder of the project and the
 - Move closed battles to seperate section
 - Add voting system
 - Add '\*' to required inputs
+- Add maximum title length when creating battle

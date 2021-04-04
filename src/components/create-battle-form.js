@@ -32,7 +32,7 @@ export default function CreateBattleForm(props) {
           />
           <label>Description:</label>
           <textarea
-            maxLength={140}
+            maxLength={500}
             placeholder="Add description"
             onFocus={({ target }) => (target.placeholder = "")}
             onBlur={({ target }) => (target.placeholder = "Add description")}
