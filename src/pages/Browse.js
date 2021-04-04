@@ -8,7 +8,7 @@ import {
 } from "../components";
 import * as ROUTES from "../constants/routes";
 import { getBattleStatus } from "../helpers/getBattleStatus";
-import { useBattles } from "../helpers/useBattles";
+import { useBattles } from "../hooks/useBattles";
 
 export default function Browse() {
   const { battles, loading } = useBattles();

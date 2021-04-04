@@ -1,7 +1,7 @@
 function createBattle(
   firebase,
   title,
-  description,
+  description = "",
   link,
   submissionCloseTime,
   votingCloseTime
@@ -22,8 +22,7 @@ function createBattle(
     .collection("battles")
     .add({
       title: title,
-      description:
-        "THIS IS A DEFAULT DESCRIPTION. ADD DESCRIPTION INPUT BOX TO CREATE BATTLE FORM",
+      description: description,
       link: link,
       submissionCloseTime: firebase.firebase_.firestore.Timestamp.fromDate(
         submissionClose

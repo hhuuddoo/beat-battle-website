@@ -14,7 +14,7 @@ import { FirebaseContext } from "../context/firebase";
 import * as ROUTES from "../constants/routes";
 import * as STATUS from "../constants/status";
 import { isEmpty } from "../helpers/isEmpty";
-import { useBattle } from "../helpers/useBattle";
+import { useBattle } from "../hooks/useBattle";
 import { submitBeat } from "../helpers/submitBeat";
 import { getBattleStatus } from "../helpers/getBattleStatus";
 
