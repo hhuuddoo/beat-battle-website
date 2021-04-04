@@ -13,7 +13,7 @@ export default function Browse() {
       <Header onBrowse />
       <Content>
         <BrowseGrid>
-          {battles.map((battle, idx) => {
+          {battles.map((battle) => {
             const submissionSeconds = battle.submissionCloseTime.seconds;
             const votingSeconds = battle.votingCloseTime.seconds;
             const { status, duration } = getBattleStatus(
@@ -22,8 +22,8 @@ export default function Browse() {
             );
             return (
               <BattleCard
-                key={idx}
-                to={`${ROUTES.BROWSE}/${battle.id}`}
+                key={battle.battleID}
+                to={`${ROUTES.BROWSE}/${battle.battleID}`}
                 title={battle.title}
                 status={status}
                 duration={duration}
