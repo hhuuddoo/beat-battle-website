@@ -3,7 +3,6 @@ import { BrowseGrid, Content, Header, BattleCard } from "../components";
 import * as ROUTES from "../constants/routes";
 import { getBattleStatus } from "../helpers/getBattleStatus";
 import { useBattles } from "../helpers/useBattles";
-import data from "../testFirstbaseData.json";
 
 export default function Browse() {
   const { battles } = useBattles();

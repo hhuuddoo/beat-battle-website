@@ -10,6 +10,8 @@ import {
   HorizontalScrollDiv,
   Error,
 } from "../components";
+import { isEmpty } from "../helpers/isEmpty";
+import { useBattle } from "../helpers/useBattle";
 
 import data from "../testFirstbaseData.json";
 
@@ -27,15 +29,11 @@ export default function Battle() {
   const now = new Date();
 
   const { battleID } = useParams();
+  const { battle, loading } = useBattle(battleID);
 
   // Store data from database as state variables
   useEffect(() => {
-    // Get data for this battle only
-    const newData = data.battles.filter(
-      (battle) => battle.id === parseInt(battleID)
-    );
-
-    if (newData.length > 0) {
+    if (!isEmpty(battle)) {
       // Destructure data object
       const {
         link,
@@ -44,7 +42,7 @@ export default function Battle() {
         votingCloseTime,
         title,
         submissions,
-      } = newData[0];
+      } = battle;
 
       // Set state
       setSampleLink(link);
@@ -53,10 +51,11 @@ export default function Battle() {
       setVotingClose(votingCloseTime);
       setBattleTitle(title);
       setSubmissions(submissions);
+      setError("");
     } else {
       setError("Invalid Battle");
     }
-  }, [battleID]);
+  }, [battle]);
 
   // Redirect user to website where sample or samples are being hosted
   const handleSampleClick = () => {
@@ -76,7 +75,14 @@ export default function Battle() {
   return (
     <>
       <Header onBrowse={true} />
-      {error ? (
+
+      {loading ? (
+        <Content>
+          <BattleGrid>
+            <h2 className="battle-title">Loading...</h2>
+          </BattleGrid>
+        </Content>
+      ) : error ? (
         <Error>{error}</Error>
       ) : (
         <Content>
@@ -89,7 +95,7 @@ export default function Battle() {
             />
           )}
           <BattleGrid>
-            <h2 className="battle-title">{"Loading..." && battleTitle}</h2>
+            <h2 className="battle-title">{battleTitle}</h2>
             <span className="samples-button" onClick={handleSampleClick}>
               Samples
             </span>

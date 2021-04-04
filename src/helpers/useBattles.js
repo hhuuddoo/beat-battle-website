@@ -1,7 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { FirebaseContext } from "../context/firebase";
 
-function useBattles() {
+// Get information on all battles
+function useBattles(targetBattleID = null) {
   const [battles, setBattles] = useState([]);
   const { firebase } = useContext(FirebaseContext);
 
