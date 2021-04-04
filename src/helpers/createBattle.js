@@ -1,5 +1,3 @@
-import { getUUID } from "./getUUID";
-
 function createBattle(
   firebase,
   title,
@@ -8,21 +6,21 @@ function createBattle(
   submissionCloseTime,
   votingCloseTime
 ) {
+  // Get submission close Date object
   let submissionClose = new Date();
   submissionClose.setHours(
     submissionClose.getHours() + parseInt(submissionCloseTime)
   );
 
-  console.log(firebase.firebase_.firestore.Timestamp);
-
+  // Get voting close Date object
   let votingClose = new Date(submissionClose);
   votingClose.setHours(votingClose.getHours() + parseInt(votingCloseTime));
 
+  // Add form entries to firebase
   firebase
     .firestore()
     .collection("battles")
     .add({
-      id: getUUID(),
       title: title,
       description:
         "THIS IS A DEFAULT DESCRIPTION. ADD DESCRIPTION INPUT BOX TO CREATE BATTLE FORM",
