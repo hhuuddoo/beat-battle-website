@@ -27,11 +27,10 @@ export default function Battle() {
   const [battleTitle, setBattleTitle] = useState("");
   const [submissions, setSubmissions] = useState([]);
   const [canSubmit, setCanSubmit] = useState(false);
-  const [error, setError] = useState("");
 
   const { firebase } = useContext(FirebaseContext);
   const { battleID } = useParams();
-  const { battle, loading } = useBattle(battleID);
+  const { battle, loading, error } = useBattle(battleID);
 
   // Store data from database as state variables
   useEffect(() => {
@@ -57,9 +56,6 @@ export default function Battle() {
       setBattleDescription(description);
       setBattleTitle(title);
       setSubmissions(submissions);
-      setError("");
-    } else {
-      setError("Invalid Battle");
     }
   }, [battle]);
 
@@ -86,7 +82,7 @@ export default function Battle() {
         </Content>
       ) : error ? (
         <Error>
-          {error}. <Link to={ROUTES.BROWSE}>Go Back</Link>
+          {error} <Link to={ROUTES.BROWSE}>Go Back</Link>
         </Error>
       ) : (
         <Content>

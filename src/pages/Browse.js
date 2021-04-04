@@ -28,9 +28,7 @@ export default function Browse() {
           </BattleGrid>
         </Content>
       ) : error ? (
-        <Error>
-          There was an error retrieving battles. Please try again later.
-        </Error>
+        <Error>{error}</Error>
       ) : battles.length > 0 ? (
         <Content>
           <BrowseGrid>

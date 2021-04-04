@@ -18,10 +18,13 @@ function useBattles() {
           return { ...battleObj.data(), battleID: battleObj.id };
         });
         setLoading(false);
+        setError(null);
         setBattles(allBattles);
       })
-      .catch((error) => {
-        setError(error.message);
+      .catch(() => {
+        setError(
+          "There was an issue retrieving battles. Please try again later."
+        );
         setLoading(false);
       });
   }, [firebase]);
