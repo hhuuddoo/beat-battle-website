@@ -9,11 +9,10 @@ function useBattle(battleID) {
   const [error, setError] = useState(null);
   const { firebase } = useContext(FirebaseContext);
 
+  const battleRef = firebase.firestore().collection("battles").doc(battleID);
+
   useEffect(() => {
-    firebase
-      .firestore()
-      .collection("battles")
-      .doc(battleID)
+    battleRef
       .get()
       .then((doc) => {
         const data = doc.data();
@@ -29,7 +28,7 @@ function useBattle(battleID) {
         setError("There was an issue retrieving the battle.");
         setLoading(false);
       });
-  }, [battleID, firebase]);
+  }, [battleRef]);
 
   return { battle, loading, error };
 }

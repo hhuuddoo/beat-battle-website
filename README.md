@@ -49,3 +49,4 @@ After this, your can run `npm start` from the root folder of the project and the
 - Add '\*' to required inputs
 - Add character counter to description textarea
 - Add overflow arrows to scroll div to let user know that there is more content
+- Change '\*' to bullet points in text area

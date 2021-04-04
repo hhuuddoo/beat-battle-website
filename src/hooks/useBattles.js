@@ -8,10 +8,10 @@ function useBattles() {
   const [error, setError] = useState(null);
   const { firebase } = useContext(FirebaseContext);
 
+  const battleRef = firebase.firestore().collection("battles");
+
   useEffect(() => {
-    firebase
-      .firestore()
-      .collection("battles")
+    battleRef
       .get()
       .then((battle) => {
         const allBattles = battle.docs.map((battleObj) => {
@@ -27,7 +27,7 @@ function useBattles() {
         );
         setLoading(false);
       });
-  }, [firebase]);
+  }, [battleRef]);
 
   return { battles, loading, error };
 }

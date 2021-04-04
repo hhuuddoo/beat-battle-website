@@ -16,22 +16,21 @@ function createBattle(
   let votingClose = new Date(submissionClose);
   votingClose.setHours(votingClose.getHours() + parseInt(votingCloseTime));
 
+  const battleRef = firebase.firestore().collection("battles");
+
   // Add form entries to firebase
-  firebase
-    .firestore()
-    .collection("battles")
-    .add({
-      title: title,
-      description: description,
-      link: link,
-      submissionCloseTime: firebase.firebase_.firestore.Timestamp.fromDate(
-        submissionClose
-      ),
-      votingCloseTime: firebase.firebase_.firestore.Timestamp.fromDate(
-        votingClose
-      ),
-      submissions: [],
-    });
+  battleRef.add({
+    title: title,
+    description: description,
+    link: link,
+    submissionCloseTime: firebase.firebase_.firestore.Timestamp.fromDate(
+      submissionClose
+    ),
+    votingCloseTime: firebase.firebase_.firestore.Timestamp.fromDate(
+      votingClose
+    ),
+    submissions: [],
+  });
 }
 
 export { createBattle };
