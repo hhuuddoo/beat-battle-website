@@ -102,7 +102,11 @@ export default function Battle() {
           )}
           <BattleGrid>
             <h2 className="battle-title">{battleTitle}</h2>
-            <a className="samples-button" target="_blank" href={sampleLink}>
+            <a
+              className={`samples-button${canSubmit ? `` : ` battle-closed`}`}
+              target="_blank"
+              href={sampleLink}
+            >
               Samples
             </a>
             {canSubmit && (

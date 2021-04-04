@@ -459,7 +459,7 @@ input[type="range"] {
           user-select: none;
   text-align: center;
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 1rem;
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
@@ -565,6 +565,10 @@ input[type="range"] {
 
 .soundcloud-frame {
   z-index: 3;
+}
+
+.battle-closed {
+  grid-column: -1;
 }
 
 .browse-grid {

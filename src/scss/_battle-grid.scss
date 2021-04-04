@@ -12,12 +12,13 @@
     user-select: none;
     text-align: center;
     text-decoration: none;
-    padding: 1rem 0;
+    padding: 1rem;
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
     color: $cta-color;
     transition: color 80ms ease-out;
+
     &:hover {
       color: $primary-color;
     }
@@ -103,4 +104,8 @@
 
 .soundcloud-frame {
   z-index: 3;
+}
+
+.battle-closed {
+  grid-column: -1;
 }
