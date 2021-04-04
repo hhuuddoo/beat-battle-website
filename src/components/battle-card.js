@@ -19,7 +19,7 @@ export default function BattleCard({
             <span>{status}</span>
           </div>
           <div className="battle-card__duration">
-            <span>{duration} remaining</span>
+            <span>{duration && `${duration} remaining`}</span>
           </div>
         </div>
       </Link>
