@@ -5,6 +5,7 @@ import {
   Header,
   BattleCard,
   BattleGrid,
+  Error,
   Footer,
 } from "../components";
 import * as ROUTES from "../constants/routes";
@@ -12,19 +13,26 @@ import { getBattleStatus } from "../helpers/getBattleStatus";
 import { useBattles } from "../hooks/useBattles";
 
 export default function Browse() {
-  const { battles, loading } = useBattles();
+  const { battles, loading, error } = useBattles();
 
   console.log(battles ? "true" : "false");
 
   return (
     <>
       <Header onBrowse />
-      <Content>
-        {loading ? (
+
+      {loading ? (
+        <Content>
           <BattleGrid>
             <h2 className="battle-title">Loading...</h2>
           </BattleGrid>
-        ) : battles.length > 0 ? (
+        </Content>
+      ) : error ? (
+        <Error>
+          There was an error retrieving battles. Please try again later.
+        </Error>
+      ) : battles.length > 0 ? (
+        <Content>
           <BrowseGrid>
             {battles.map((battle) => {
               const submissionSeconds = battle.submissionCloseTime.seconds;
@@ -44,12 +52,15 @@ export default function Browse() {
               );
             })}
           </BrowseGrid>
-        ) : (
+        </Content>
+      ) : (
+        <Content>
           <BattleGrid>
             <h2 className="battle-title">No battles avaliable</h2>
           </BattleGrid>
-        )}
-      </Content>
+        </Content>
+      )}
+
       <Footer />
     </>
   );

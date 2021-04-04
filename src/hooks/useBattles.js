@@ -5,6 +5,7 @@ import { FirebaseContext } from "../context/firebase";
 function useBattles() {
   const [battles, setBattles] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { firebase } = useContext(FirebaseContext);
 
   useEffect(() => {
@@ -20,12 +21,12 @@ function useBattles() {
         setBattles(allBattles);
       })
       .catch((error) => {
-        console.log(error.message);
+        setError(error.message);
         setLoading(false);
       });
   }, [firebase]);
 
-  return { battles, loading };
+  return { battles, loading, error };
 }
 
 export { useBattles };
