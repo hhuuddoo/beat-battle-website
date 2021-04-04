@@ -133,6 +133,12 @@ input {
     box-shadow: 0 0 0 4px rgba($color: $primary-color, $alpha: 0.4);
   }
 
+  &[type="text"]:not(:placeholder-shown),
+  &[type="url"]:not(:placeholder-shown) {
+    color: $primary-color;
+    font-weight: 400;
+  }
+
   &[type="range"] {
     padding-left: 0;
     padding-right: 0;
@@ -151,6 +157,11 @@ textarea {
   box-shadow: none;
   padding: 0.75rem;
   transition: box-shadow 0.1s ease-out;
+
+  &:not(:placeholder-shown) {
+    color: $primary-color;
+    font-weight: 400;
+  }
 
   &:focus {
     outline: 0;
