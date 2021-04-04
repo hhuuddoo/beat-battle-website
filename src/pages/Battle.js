@@ -25,8 +25,6 @@ export default function Battle() {
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
 
-  const now = new Date();
-
   const { battleID } = useParams();
   const { battle, loading } = useBattle(battleID);
 
@@ -97,9 +95,9 @@ export default function Battle() {
           )}
           <BattleGrid>
             <h2 className="battle-title">{battleTitle}</h2>
-            <span className="samples-button" onClick={handleSampleClick}>
+            <a className="samples-button" target="_blank" href={sampleLink}>
               Samples
-            </span>
+            </a>
             <span className="submit-button" onClick={() => setModalOpen(true)}>
               Submit
             </span>
