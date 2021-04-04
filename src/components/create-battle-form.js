@@ -29,7 +29,7 @@ export default function CreateBattleForm(props) {
           <label>Link to samples:</label>
           <input
             type="url"
-            placeholder="https://www.youtube.com or https://www.dropbox.com"
+            placeholder="e.g. YouTube or Dropbox link"
             pattern="https://.+"
             required
             value={url}

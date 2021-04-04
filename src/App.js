@@ -1,10 +1,11 @@
 import { Create, Browse, Home, Battle } from "./pages";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
+import history from "./helpers/history";
 import * as ROUTES from "./constants/routes";
 
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <Switch>
         <Route exact path={ROUTES.HOME}>
           <Home />

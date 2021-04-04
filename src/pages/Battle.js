@@ -69,6 +69,7 @@ export default function Battle() {
   const HandleSubmit = (e) => {
     e.preventDefault();
     submitBeat(battleID, newSubmissionUrl, firebase);
+    setNewSubmissionUrl("");
     setModalOpen(false);
   };
 

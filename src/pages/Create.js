@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../context/firebase";
+import * as ROUTES from "../constants/routes";
+import history from "../helpers/history";
 import { CreateBattleForm, Content, Header } from "../components";
 import { createBattle } from "../helpers/createBattle";
 
@@ -12,12 +14,8 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     createBattle(firebase, title, "none", url, duration, voting);
-
-    alert(
-      `Battle title: ${title}\nSubmission Link: ${url}\nDuration: ${duration} hr\nVoting Time: ${voting} hr\n`
-    );
+    history.push(ROUTES.BROWSE);
   };
 
   return (
