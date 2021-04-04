@@ -1,4 +1,5 @@
 import { msToTime } from "./msToTime";
+import * as STATUS from "../constants/status";
 
 // Get current status of battle
 function getBattleStatus(submissionClose, votingClose) {
@@ -6,14 +7,14 @@ function getBattleStatus(submissionClose, votingClose) {
   const submissionCloseTime = new Date(submissionClose * SECONDS_TO_MILLI);
   const votingCloseTime = new Date(votingClose * SECONDS_TO_MILLI);
   const now = new Date();
-  let status = "Closed";
+  let status = STATUS.CLOSED;
   let duration = "";
 
   if (now <= submissionCloseTime) {
-    status = "Open";
+    status = STATUS.OPEN;
     duration = msToTime(submissionCloseTime - now);
   } else if (now <= votingCloseTime) {
-    status = "Voting";
+    status = STATUS.VOTING;
     duration = msToTime(submissionCloseTime - now);
   }
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
 import {
   BattleGrid,
@@ -10,9 +10,13 @@ import {
   HorizontalScrollDiv,
   Error,
 } from "../components";
+import { FirebaseContext } from "../context/firebase";
 import * as ROUTES from "../constants/routes";
+import * as STATUS from "../constants/status";
 import { isEmpty } from "../helpers/isEmpty";
 import { useBattle } from "../helpers/useBattle";
+import { submitBeat } from "../helpers/submitBeat";
+import { getBattleStatus } from "../helpers/getBattleStatus";
 
 export default function Battle() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -25,8 +29,12 @@ export default function Battle() {
   const [submissions, setSubmissions] = useState([]);
   const [error, setError] = useState("");
 
+  const { firebase } = useContext(FirebaseContext);
   const { battleID } = useParams();
   const { battle, loading } = useBattle(battleID);
+
+  const { status } = getBattleStatus(submissionClose, votingClose);
+  const canSubmit = status === STATUS.OPEN;
 
   // Store data from database as state variables
   useEffect(() => {
@@ -54,15 +62,10 @@ export default function Battle() {
     }
   }, [battle]);
 
-  // Redirect user to website where sample or samples are being hosted
-  const handleSampleClick = () => {
-    alert(`Redirect to ${sampleLink}`);
-  };
-
-  const handleSubmit = (e) => {
+  const HandleSubmit = (e) => {
     e.preventDefault();
-    alert(`Link at ${newSubmissionUrl}`);
-    // CLOSE MODAL HERE
+    submitBeat(battleID, newSubmissionUrl, firebase);
+    setModalOpen(false);
   };
 
   useEffect(() => {
@@ -90,7 +93,7 @@ export default function Battle() {
               url={newSubmissionUrl}
               setUrl={setNewSubmissionUrl}
               setModalOpen={setModalOpen}
-              handleSubmit={handleSubmit}
+              handleSubmit={HandleSubmit}
             />
           )}
           <BattleGrid>
